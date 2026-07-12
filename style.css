@@ -1,0 +1,109 @@
+/* 1. FUENTES (Importamos fuentes de Google Fonts para el estilo pixel) */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap');
+
+/* 2. ESTILOS GENERALES */
+body {
+    /* Fondo temático: patrón de cuadros oscuros (similar a la primera captura) */
+    background-color: #1a1a1a;
+    background-image: 
+        linear-gradient(45deg, #222 25%, transparent 25%), 
+        linear-gradient(-45deg, #222 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #222 75%), 
+        linear-gradient(-45deg, transparent 75%, #222 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+
+    /* Tipografía principal */
+    font-family: 'Roboto', sans-serif;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Contenedor principal para centrar el contenido */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 3. TÍTULOS Y TEXTO (Estilo Pixelado y Color Neón) */
+h1 {
+    font-family: 'Press Start 2P', cursive; /* Fuente pixelada */
+    color: #4CAF50; /* Verde Minecraft menú */
+    text-shadow: 3px 3px 0px #1b5e20; /* Sombreado tipo bloque */
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 1em;
+}
+
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #4CAF50;
+    font-size: 1.2em;
+    margin-top: 1.5em;
+    border-bottom: 3px solid #4CAF50;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* 4. CAJAS DE INFORMACIÓN (Cartas con borde) */
+section {
+    background-color: rgba(33, 33, 33, 0.9); /* Fondo oscuro semitransparente */
+    border: 5px solid #424242; /* Borde tipo bloque grueso */
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 5px 5px 0px #000; /* Sombra de bloque */
+}
+
+strong {
+    color: #fff; /* Resaltar texto en blanco */
+}
+
+/* 5. BOTÓN (Estilo bloque biselado) */
+.boton-contenedor {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.boton {
+    background-color: #757575; /* Gris piedra */
+    color: white;
+    font-family: 'Press Start 2P', cursive; /* Fuente pixelada */
+    font-size: 0.9em;
+    padding: 20px 30px;
+    text-decoration: none;
+    display: inline-block;
+    
+    /* Borde tipo bloque biselado */
+    border: 5px solid #212121;
+    box-shadow: inset -4px -4px 0px #424242, inset 4px 4px 0px #bdbdbd;
+    
+    transition: all 0.1s ease-in-out;
+}
+
+.boton:hover {
+    background-color: #4CAF50; /* Verde al pasar el mouse */
+    box-shadow: inset -4px -4px 0px #1b5e20, inset 4px 4px 0px #a5d6a7;
+    transform: translateY(2px); /* Efecto de presionar */
+}
+
+/* 6. FOOTER */
+footer {
+    text-align: center;
+    color: #757575;
+    font-size: 0.8em;
+    margin-top: 50px;
+    padding: 20px;
+    border-top: 4px solid #424242;
+}
+
+/* 7. RESPONSIVIDAD (Ajuste para celulares) */
+@media (max-width: 600px) {
+    body { padding: 10px; }
+    h1 { font-size: 1.2em; text-shadow: 2px 2px 0px #1b5e20; }
+    h2 { font-size: 0.9em; }
+    section { padding: 15px; border-width: 3px; }
+    .boton { padding: 15px 20px; font-size: 0.7em; border-width: 3px; }
+}
