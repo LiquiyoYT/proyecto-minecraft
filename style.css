@@ -1,0 +1,142 @@
+/* 1. FUENTES (Importamos fuentes de Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap');
+
+/* 2. ESTILOS GENERALES */
+body {
+    /* Fondo temático: patrón de cuadros oscuros */
+    background-color: #1a1a1a;
+    background-image: 
+        linear-gradient(45deg, #222 25%, transparent 25%), 
+        linear-gradient(-45deg, #222 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #222 75%), 
+        linear-gradient(-45deg, transparent 75%, #222 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+
+    /* Tipografía principal */
+    font-family: 'Roboto', sans-serif;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* TÍTULOS (Estilo Pixelado) */
+h1, h2 {
+    font-family: 'Press Start 2P', cursive; /* Fuente pixelada */
+    color: #4CAF50; /* Verde Minecraft menú */
+    text-shadow: 2px 2px 0px #1b5e20; /* Sombreado tipo bloque */
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    border-bottom: 2px solid #4CAF50;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* 3. CONTENEDORES DE INFORMACIÓN (Cartas) */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+section {
+    background-color: rgba(33, 33, 33, 0.85); /* Fondo oscuro semitransparente */
+    border: 4px solid #424242; /* Borde tipo bloque */
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.5); /* Sombra de bloque */
+}
+
+/* LISTAS Y PÁRRAFOS */
+ul, ol {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+strong {
+    color: #fff;
+}
+
+/* 4. BOTONES TEMÁTICOS (Estilo Bloque) */
+.boton-contenedor {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.boton {
+    /* Colores y tipografía */
+    background-color: #757575; /* Gris piedra */
+    color: white;
+    font-family: 'Press Start 2P', cursive; /* Fuente pixelada */
+    font-size: 1em;
+    
+    /* Tamaño y forma */
+    padding: 20px 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    
+    /* Borde tipo bloque */
+    border: 4px solid #212121;
+    box-shadow: inset -4px -4px 0px #424242, inset 4px 4px 0px #bdbdbd;
+    
+    transition: all 0.1s ease-in-out;
+}
+
+.boton:hover {
+    background-color: #4CAF50; /* Verde al pasar el mouse */
+    box-shadow: inset -4px -4px 0px #1b5e20, inset 4px 4px 0px #a5d6a7;
+    transform: translateY(2px); /* Efecto de presionar */
+}
+
+/* 5. IMÁGENES RESPONSIVAS (Visto en clase) */
+.img-fluida {
+    max-width: 100%;
+    height: auto;
+    border: 6px solid #424242; /* Borde de bloque */
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.3);
+    margin-top: 20px;
+}
+
+/* PIE DE PÁGINA (Footer) */
+footer {
+    background-color: #212121;
+    color: #757575;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.8em;
+    border-top: 4px solid #424242;
+}
+
+/* 6. RESPONSIVIDAD (Ajuste para móviles) */
+@media (max-width: 600px) {
+    body { padding: 10px; }
+    h1 { font-size: 1.5em; }
+    h2 { font-size: 1.2em; }
+    section { padding: 15px; border-width: 2px; }
+    .boton { padding: 15px 20px; font-size: 0.8em; }
+}
